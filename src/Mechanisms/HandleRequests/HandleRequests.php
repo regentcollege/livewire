@@ -27,9 +27,7 @@ class HandleRequests extends Mechanism
 
     function getUpdateUri()
     {
-        return (string) str(
-            route($this->updateRoute->getName(), [], false)
-        )->start('/');
+        return route($this->updateRoute->getName(), [], true);
     }
 
     function skipRequestPayloadTamperingMiddleware()
